@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos — JOJ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">JO<span>J</span><span class="dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="events.html">Événements</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+      <div class="section-tag reveal">À propos de nous</div>
+      <h1 class="section-title reveal" data-delay="0.1" style="margin:0 auto 1rem;">Le projet <span>JOJ</span></h1>
+      <p class="section-subtitle reveal" data-delay="0.2" style="margin:0 auto;">Une solution digitale née de la volonté de simplifier la gestion des tickets lors des Jeux et événements sportifs.</p>
+    </header>
+
+    <!-- MISSION -->
+    <section class="section">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem;align-items:center;">
+        <div>
+          <div class="section-tag reveal">Notre mission</div>
+          <h2 class="section-title reveal" data-delay="0.1">Simplifier,<br><span>c'est notre credo</span></h2>
+          <p class="reveal" data-delay="0.2" style="color:var(--text2);line-height:1.8;font-size:1.0625rem;font-weight:300;margin-bottom:1.5rem;">
+            JOJ est né d'un constat simple : la gestion des tickets lors des grands événements sportifs est souvent chaotique, peu traçable et difficile à coordonner entre les équipes.
+          </p>
+          <p class="reveal" data-delay="0.3" style="color:var(--text2);line-height:1.8;font-size:1.0625rem;font-weight:300;">
+            Notre plateforme centralise toutes les demandes, les attribue aux bonnes personnes et permet un suivi en temps réel — du premier signalement à la résolution finale.
+          </p>
+        </div>
+        <div class="reveal" data-delay="0.2">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="card" style="text-align:center;">
+              <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--accent);margin-bottom:0.5rem;" data-counter="320" data-suffix="+">0+</div>
+              <div style="font-size:0.875rem;color:var(--text2);">Tickets traités</div>
+            </div>
+            <div class="card" style="text-align:center;">
+              <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--accent2);margin-bottom:0.5rem;" data-counter="98" data-suffix="%">0%</div>
+              <div style="font-size:0.875rem;color:var(--text2);">Satisfaction</div>
+            </div>
+            <div class="card" style="text-align:center;">
+              <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:var(--accent3);margin-bottom:0.5rem;" data-counter="12" data-suffix="h">0h</div>
+              <div style="font-size:0.875rem;color:var(--text2);">Résolution moy.</div>
+            </div>
+            <div class="card" style="text-align:center;">
+              <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;color:#a89fff;margin-bottom:0.5rem;" data-counter="4" data-suffix="">0</div>
+              <div style="font-size:0.875rem;color:var(--text2);">Membres équipe</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- VALEURS -->
+    <section class="section">
+      <div class="section-tag reveal">Nos valeurs</div>
+      <h2 class="section-title reveal" data-delay="0.1">Ce qui nous<br><span>guide</span></h2>
+      <div class="cards-grid" style="margin-top:2.5rem;">
+        <div class="card reveal" data-delay="0.1">
+          <div class="card-icon">⚡</div>
+          <h3>Réactivité</h3>
+          <p>Chaque ticket est pris en charge rapidement. Nous nous engageons sur des délais de réponse courts et transparents.</p>
+        </div>
+        <div class="card reveal" data-delay="0.2">
+          <div class="card-icon">🔍</div>
+          <h3>Transparence</h3>
+          <p>Vous suivez l'état de votre ticket à chaque étape. Aucune boîte noire, tout est visible et traçable.</p>
+        </div>
+        <div class="card reveal" data-delay="0.3">
+          <div class="card-icon">🎯</div>
+          <h3>Efficacité</h3>
+          <p>Notre système de priorisation garantit que les problèmes critiques sont traités en premier.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ÉQUIPE -->
+    <section class="section">
+      <div class="section-tag reveal">L'équipe</div>
+      <h2 class="section-title reveal" data-delay="0.1">Les personnes derrière<br><span>le projet</span></h2>
+      <p class="section-subtitle reveal" data-delay="0.2">Une équipe de 4 étudiants passionnés par le développement web et la gestion de projet.</p>
+
+      <div class="cards-grid" style="margin-top:2.5rem;">
+        <div class="team-card reveal" data-delay="0.1">
+          <div class="team-avatar" style="background:rgba(108,99,255,0.12);">CP</div>
+          <div class="team-name">Membre 1</div>
+          <div class="team-role">Chef de projet</div>
+          <div class="team-desc">Coordination de l'équipe, gestion du Trello et communication avec le client.</div>
+        </div>
+        <div class="team-card reveal" data-delay="0.2">
+          <div class="team-avatar" style="background:rgba(255,107,107,0.12);">DF</div>
+          <div class="team-name">Membre 2</div>
+          <div class="team-role">Dev Frontend</div>
+          <div class="team-desc">Développement des interfaces HTML, CSS et JavaScript du site vitrine.</div>
+        </div>
+        <div class="team-card reveal" data-delay="0.3">
+          <div class="team-avatar" style="background:rgba(67,232,216,0.12);">DC</div>
+          <div class="team-name">Membre 3</div>
+          <div class="team-role">Dev Contenu</div>
+          <div class="team-desc">Rédaction des contenus, création des visuels et intégration dans les pages.</div>
+        </div>
+        <div class="team-card reveal" data-delay="0.4">
+          <div class="team-avatar" style="background:rgba(168,159,255,0.12);">GH</div>
+          <div class="team-name">Membre 4</div>
+          <div class="team-role">Responsable GitHub</div>
+          <div class="team-desc">Gestion du repository, branches, Pull Requests et revue de code.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="text-align:center;">
+      <h2 class="section-title reveal" style="margin:0 auto 1rem;">Rejoignez<br><span>l'aventure JOJ</span></h2>
+      <div class="reveal" data-delay="0.1" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+        <a href="tickets.html" class="btn-primary">Créer un ticket</a>
+        <a href="contact.html" class="btn-secondary">Nous contacter</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">JO<span>J</span></div>
+      <nav class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="events.html">Événements</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <p class="footer-copy">© 2026 JOJ — Gestion des Tickets. Projet réalisé dans le cadre de l'atelier créatif.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
