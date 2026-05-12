@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — JOJ</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .contact-info-card {
+      background: var(--card);
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: all var(--transition);
+    }
+    .contact-info-card:hover {
+      border-color: rgba(108,99,255,0.3);
+    }
+    .contact-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: rgba(108,99,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .contact-icon.red   { background: rgba(255,107,107,0.1); }
+    .contact-icon.teal  { background: rgba(67,232,216,0.1); }
+    .contact-label {
+      font-size: 0.75rem;
+      color: var(--text3);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .contact-value {
+      font-size: 0.9375rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .contact-sub {
+      font-size: 0.8125rem;
+      color: var(--text3);
+      margin-top: 0.125rem;
+    }
+    .map-placeholder {
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.75rem;
+      color: var(--text3);
+      font-size: 0.9rem;
+    }
+    .faq-item {
+      border: 1px solid var(--border2);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-bottom: 0.625rem;
+    }
+    .faq-question {
+      width: 100%;
+      background: var(--card);
+      border: none;
+      padding: 1rem 1.25rem;
+      text-align: left;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      transition: all var(--transition);
+    }
+    .faq-question:hover { background: rgba(108,99,255,0.05); }
+    .faq-arrow {
+      transition: transform var(--transition);
+      color: var(--text3);
+      flex-shrink: 0;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    .faq-answer.open { max-height: 200px; }
+    .faq-answer-inner {
+      padding: 0 1.25rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text2);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">JO<span>J</span><span class="dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="events.html">Événements</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main>
+
+    <header class="page-header">
+      <div class="section-tag reveal">Contact</div>
+      <h1 class="section-title reveal" data-delay="0.1" style="margin:0 auto 1rem;">Parlons-nous <span>ensemble</span></h1>
+      <p class="section-subtitle reveal" data-delay="0.2" style="margin:0 auto;">Une question, une suggestion ou un problème ? Notre équipe vous répond dans les plus brefs délais.</p>
+    </header>
+
+    <section class="section" style="padding-top:0;">
+      <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:3.5rem;align-items:start;">
+
+        <!-- INFOS + FAQ -->
+        <div>
+          <h2 class="reveal" style="font-family:var(--font-display);font-size:1.25rem;font-weight:600;margin-bottom:1.5rem;">Nos coordonnées</h2>
+
+          <div style="display:flex;flex-direction:column;gap:0.875rem;margin-bottom:2.5rem;">
+            <div class="contact-info-card reveal" data-delay="0.1">
+              <div class="contact-icon">📧</div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">contact@joj-tickets.sn</div>
+                <div class="contact-sub">Réponse sous 24h</div>
+              </div>
+            </div>
+            <div class="contact-info-card reveal" data-delay="0.2">
+              <div class="contact-icon red">📞</div>
+              <div>
+                <div class="contact-label">Téléphone</div>
+                <div class="contact-value">+221 77 000 00 00</div>
+                <div class="contact-sub">Lun–Ven, 8h–18h</div>
+              </div>
+            </div>
+            <div class="contact-info-card reveal" data-delay="0.3">
+              <div class="contact-icon teal">📍</div>
+              <div>
+                <div class="contact-label">Adresse</div>
+                <div class="contact-value">Village Olympique JOJ</div>
+                <div class="contact-sub">Dakar, Sénégal</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-placeholder reveal" data-delay="0.2">
+            <span style="font-size:2rem;">🗺️</span>
+            <span>Village Olympique — Dakar, Sénégal</span>
+          </div>
+
+          <!-- FAQ -->
+          <div style="margin-top:2.5rem;">
+            <h3 class="reveal" style="font-family:var(--font-display);font-size:1.125rem;font-weight:600;margin-bottom:1.25rem;">Questions fréquentes</h3>
+
+            <div class="faq-item reveal" data-delay="0.1">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                Comment soumettre un ticket ?
+                <span class="faq-arrow">▾</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">Rendez-vous sur la page Tickets, remplissez le formulaire avec votre nom, email, catégorie du problème et description. Votre ticket sera traité dans les 24h.</div>
+              </div>
+            </div>
+
+            <div class="faq-item reveal" data-delay="0.2">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                Quel est le délai de réponse moyen ?
+                <span class="faq-arrow">▾</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">Notre temps de réponse moyen est de 12h pour les tickets normaux, et moins de 2h pour les tickets urgents liés à des événements en cours.</div>
+              </div>
+            </div>
+
+            <div class="faq-item reveal" data-delay="0.3">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                Puis-je suivre l'état de mon ticket ?
+                <span class="faq-arrow">▾</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">Oui ! Rendez-vous sur la page Tickets et filtrez par statut. Vous pouvez également vous référer au numéro de ticket qui vous est communiqué après soumission.</div>
+              </div>
+            </div>
+
+            <div class="faq-item reveal" data-delay="0.4">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                Comment contacter l'équipe en urgence ?
+                <span class="faq-arrow">▾</span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">Pour toute urgence pendant un événement, appelez directement notre ligne dédiée au +221 77 000 00 00. Pour les urgences techniques, soumettez un ticket de priorité "Urgente".</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- FORMULAIRE CONTACT -->
+        <div class="reveal" data-delay="0.2">
+          <h2 style="font-family:var(--font-display);font-size:1.25rem;font-weight:600;margin-bottom:1.5rem;">Envoyer un message</h2>
+          <div style="background:var(--card);border:1px solid var(--border2);border-radius:var(--radius);padding:2rem 2.25rem;">
+            <form id="contact-form" novalidate>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+                <div class="form-group">
+                  <label for="c-firstname">Prénom</label>
+                  <input type="text" id="c-firstname" placeholder="Prénom" required />
+                </div>
+                <div class="form-group">
+                  <label for="c-lastname">Nom</label>
+                  <input type="text" id="c-lastname" placeholder="Nom de famille" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="c-email">Email</label>
+                <input type="email" id="c-email" placeholder="votre@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="c-phone">Téléphone (optionnel)</label>
+                <input type="tel" id="c-phone" placeholder="+221 77 000 00 00" />
+              </div>
+              <div class="form-group">
+                <label for="c-subject">Sujet</label>
+                <select id="c-subject">
+                  <option value="">Sélectionner un sujet</option>
+                  <option>Question générale</option>
+                  <option>Problème technique</option>
+                  <option>Partenariat</option>
+                  <option>Presse / Médias</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="c-message">Message</label>
+                <textarea id="c-message" placeholder="Votre message..." required style="min-height:160px;"></textarea>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:1.5rem;">
+                <input type="checkbox" id="c-consent" style="width:16px;height:16px;accent-color:var(--accent);cursor:pointer;" />
+                <label for="c-consent" style="font-size:0.8125rem;color:var(--text3);cursor:pointer;">J'accepte que mes données soient utilisées pour traiter ma demande.</label>
+              </div>
+              <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+                Envoyer le message
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M2 8l10 0M2 4l12 4-12 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">JO<span>J</span></div>
+      <nav class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="events.html">Événements</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <p class="footer-copy">© 2026 JOJ — Gestion des Tickets. Projet réalisé dans le cadre de l'atelier créatif.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const arrow = btn.querySelector('.faq-arrow');
+      const isOpen = answer.classList.contains('open');
+      // close all
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-arrow').forEach(a => a.style.transform = '');
+      if (!isOpen) {
+        answer.classList.add('open');
+        arrow.style.transform = 'rotate(180deg)';
+      }
+    }
+  </script>
+</body>
+</html>

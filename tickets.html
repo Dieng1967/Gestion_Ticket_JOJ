@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tickets — JOJ</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .filter-bar {
+      display: flex;
+      gap: 0.625rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .filter-pill {
+      padding: 0.4rem 1rem;
+      border-radius: 99px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      border: 1px solid var(--border2);
+      background: transparent;
+      color: var(--text2);
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: var(--font-body);
+    }
+    .filter-pill:hover,
+    .filter-pill.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .ticket-list { display: flex; flex-direction: column; gap: 0.875rem; }
+    .ticket-card { transition: all var(--transition); }
+    .status-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .priority-bar {
+      width: 3px;
+      border-radius: 2px;
+      align-self: stretch;
+      flex-shrink: 0;
+    }
+    .form-card {
+      background: var(--card);
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      padding: 2rem 2.25rem;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media(max-width:600px) { .form-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">JO<span>J</span><span class="dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="events.html">Événements</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main>
+
+    <header class="page-header">
+      <div class="section-tag reveal">Support</div>
+      <h1 class="section-title reveal" data-delay="0.1" style="margin:0 auto 1rem;">Gestion des <span>tickets</span></h1>
+      <p class="section-subtitle reveal" data-delay="0.2" style="margin:0 auto;">Soumettez une demande ou consultez l'état des tickets existants.</p>
+    </header>
+
+    <section class="section" style="padding-top:0;">
+      <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:start;">
+
+        <!-- LISTE DES TICKETS -->
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+            <h2 class="reveal" style="font-family:var(--font-display);font-size:1.25rem;font-weight:600;">Tickets récents</h2>
+            <div style="font-size:0.8125rem;color:var(--text3);" class="reveal" data-delay="0.1">6 tickets affichés</div>
+          </div>
+
+          <div class="filter-bar reveal" data-delay="0.1">
+            <button class="filter-pill active" data-filter="all">Tous</button>
+            <button class="filter-pill" data-filter="open">En attente</button>
+            <button class="filter-pill" data-filter="progress">En cours</button>
+            <button class="filter-pill" data-filter="resolved">Résolus</button>
+          </div>
+
+          <div class="ticket-list">
+
+            <div class="ticket-card reveal" data-delay="0.1" data-status="progress">
+              <div class="ticket-card" style="display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;">
+                <div class="priority-bar" style="background:#ff6b6b;height:52px;"></div>
+                <div class="ticket-info">
+                  <div class="ticket-id">#JOJ-001</div>
+                  <div class="ticket-title">Problème d'accès au stade principal</div>
+                  <div class="ticket-meta">Signalé le 18 Jan 2026 · Cérémonie d'ouverture</div>
+                </div>
+                <div class="ticket-actions">
+                  <span class="badge badge-red" style="white-space:nowrap;">En cours</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ticket-card reveal" data-delay="0.2" data-status="resolved">
+              <div class="ticket-card" style="display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;">
+                <div class="priority-bar" style="background:#34d399;height:52px;"></div>
+                <div class="ticket-info">
+                  <div class="ticket-id">#JOJ-002</div>
+                  <div class="ticket-title">Accréditation non reconnue — équipe presse</div>
+                  <div class="ticket-meta">Signalé le 18 Jan 2026 · Football</div>
+                </div>
+                <div class="ticket-actions">
+                  <span class="badge badge-green" style="white-space:nowrap;">Résolu</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ticket-card reveal" data-delay="0.3" data-status="open">
+              <div class="ticket-card" style="display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;">
+                <div class="priority-bar" style="background:#fbbf24;height:52px;"></div>
+                <div class="ticket-info">
+                  <div class="ticket-id">#JOJ-003</div>
+                  <div class="ticket-title">Matériel technique défectueux — sonorisation</div>
+                  <div class="ticket-meta">Signalé le 19 Jan 2026 · Festival Culturel</div>
+                </div>
+                <div class="ticket-actions">
+                  <span class="badge badge-purple" style="white-space:nowrap;">En attente</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ticket-card reveal" data-delay="0.1" data-status="resolved">
+              <div class="ticket-card" style="display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;">
+                <div class="priority-bar" style="background:#34d399;height:52px;"></div>
+                <div class="ticket-info">
+                  <div class="ticket-id">#JOJ-004</div>
+                  <div class="ticket-title">Transport délégation bloqué</div>
+                  <div class="ticket-meta">Signalé le 19 Jan 2026 · Natation</div>
+                </div>
+                <div class="ticket-actions">
+                  <span class="badge badge-green" style="white-space:nowrap;">Résolu</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ticket-card reveal" data-delay="0.2" data-status="progress">
+              <div class="ticket-card" style="display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;">
+                <div class="priority-bar" style="background:#ff6b6b;height:52px;"></div>
+                <div class="ticket-info">
+                  <div class="ticket-id">#JOJ-005</div>
+                  <div class="ticket-title">Panne électrique — vestiaires athlètes</div>
+                  <div class="ticket-meta">Signalé le 20 Jan 2026 · Boxe</div>
+                </div>
+                <div class="ticket-actions">
+                  <span class="badge badge-red" style="white-space:nowrap;">En cours</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ticket-card reveal" data-delay="0.3" data-status="open">
+              <div class="ticket-card" style="display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;">
+                <div class="priority-bar" style="background:#fbbf24;height:52px;"></div>
+                <div class="ticket-info">
+                  <div class="ticket-id">#JOJ-006</div>
+                  <div class="ticket-title">Erreur dans le programme officiel</div>
+                  <div class="ticket-meta">Signalé le 20 Jan 2026 · Communication</div>
+                </div>
+                <div class="ticket-actions">
+                  <span class="badge badge-purple" style="white-space:nowrap;">En attente</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- FORMULAIRE -->
+        <div class="reveal" data-delay="0.2">
+          <h2 style="font-family:var(--font-display);font-size:1.25rem;font-weight:600;margin-bottom:1.5rem;">Créer un nouveau ticket</h2>
+          <div class="form-card">
+            <form id="ticket-form" novalidate>
+              <div class="form-group">
+                <label for="t-name">Votre nom complet</label>
+                <input type="text" id="t-name" placeholder="Ex : Amadou Diallo" required />
+              </div>
+              <div class="form-group">
+                <label for="t-email">Adresse email</label>
+                <input type="email" id="t-email" placeholder="votre@email.com" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="t-category">Catégorie</label>
+                  <select id="t-category">
+                    <option value="">Choisir...</option>
+                    <option>Accès / Accréditation</option>
+                    <option>Transport</option>
+                    <option>Équipement</option>
+                    <option>Communication</option>
+                    <option>Sécurité</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t-priority">Priorité</label>
+                  <select id="t-priority">
+                    <option value="">Choisir...</option>
+                    <option>Faible</option>
+                    <option>Normale</option>
+                    <option>Haute</option>
+                    <option>Urgente</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="t-event">Événement concerné</label>
+                <select id="t-event">
+                  <option value="">Sélectionner un événement</option>
+                  <option>Cérémonie d'ouverture</option>
+                  <option>Tournoi de Football</option>
+                  <option>Natation — Séries</option>
+                  <option>Festival Culturel</option>
+                  <option>Boxe — Demi-finales</option>
+                  <option>Cérémonie de clôture</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="t-subject">Titre du problème</label>
+                <input type="text" id="t-subject" placeholder="Décrivez brièvement le problème" required />
+              </div>
+              <div class="form-group">
+                <label for="t-desc">Description détaillée</label>
+                <textarea id="t-desc" placeholder="Décrivez le problème en détail : lieu, heure, personnes concernées..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+                Soumettre le ticket
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">JO<span>J</span></div>
+      <nav class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="events.html">Événements</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <p class="footer-copy">© 2026 JOJ — Gestion des Tickets. Projet réalisé dans le cadre de l'atelier créatif.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.filter-pill').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('[data-status]').forEach(card => {
+          if (filter === 'all' || card.dataset.status === filter) {
+            card.style.display = '';
+            setTimeout(() => card.style.opacity = '1', 10);
+          } else {
+            card.style.opacity = '0';
+            setTimeout(() => card.style.display = 'none', 280);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

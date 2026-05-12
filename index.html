@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JOJ — Gestion des Tickets</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      JO<span>J</span><span class="dot"></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="events.html">Événements</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="hero-badge">Plateforme de gestion de tickets</div>
+        <h1>
+          Gérez vos<br>
+          <span class="line2">tickets JOJ</span><br>
+          <span class="line3">simplement.</span>
+        </h1>
+        <p>Une solution centralisée pour créer, suivre et résoudre vos tickets d'assistance. Rapide, efficace et collaboratif.</p>
+        <div class="hero-actions">
+          <a href="tickets.html" class="btn-primary">
+            Créer un ticket
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="about.html" class="btn-secondary">En savoir plus</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="num"><span data-counter="320" data-suffix="+">0+</span></div>
+            <div class="label">Tickets résolus</div>
+          </div>
+          <div class="stat-item">
+            <div class="num"><span data-counter="98" data-suffix="%">0%</span></div>
+            <div class="label">Satisfaction client</div>
+          </div>
+          <div class="stat-item">
+            <div class="num"><span data-counter="24" data-suffix="h">0h</span></div>
+            <div class="label">Temps de réponse moyen</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- FONCTIONNALITÉS -->
+    <section class="section">
+      <div class="section-tag">Fonctionnalités</div>
+      <h2 class="section-title reveal">Tout ce dont vous<br><span>avez besoin</span></h2>
+      <p class="section-subtitle reveal" data-delay="0.1">Une plateforme pensée pour simplifier la gestion de vos demandes d'assistance au quotidien.</p>
+
+      <div class="cards-grid">
+        <div class="card reveal" data-delay="0.1">
+          <div class="card-icon">🎫</div>
+          <h3>Création de tickets</h3>
+          <p>Soumettez vos demandes en quelques secondes avec un formulaire clair et structuré.</p>
+        </div>
+        <div class="card reveal" data-delay="0.2">
+          <div class="card-icon">📊</div>
+          <h3>Suivi en temps réel</h3>
+          <p>Consultez l'état de vos tickets à tout moment : en attente, en cours, résolu.</p>
+        </div>
+        <div class="card reveal" data-delay="0.3">
+          <div class="card-icon">🔔</div>
+          <h3>Notifications</h3>
+          <p>Soyez alerté dès qu'une mise à jour est effectuée sur l'un de vos tickets.</p>
+        </div>
+        <div class="card reveal" data-delay="0.1">
+          <div class="card-icon">🏷️</div>
+          <h3>Catégorisation</h3>
+          <p>Classez vos tickets par priorité et par catégorie pour un traitement optimal.</p>
+        </div>
+        <div class="card reveal" data-delay="0.2">
+          <div class="card-icon">📅</div>
+          <h3>Événements liés</h3>
+          <p>Associez vos tickets aux événements JOJ correspondants pour un meilleur contexte.</p>
+        </div>
+        <div class="card reveal" data-delay="0.3">
+          <div class="card-icon">🤝</div>
+          <h3>Collaboration</h3>
+          <p>Travaillez en équipe pour résoudre les tickets plus rapidement et efficacement.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CTA SECTION -->
+    <section class="section" style="text-align:center;">
+      <div class="section-tag">Commencer</div>
+      <h2 class="section-title reveal" style="margin:0 auto 1rem;">Prêt à simplifier votre<br><span>gestion ?</span></h2>
+      <p class="section-subtitle reveal" data-delay="0.1" style="margin:0 auto 2.5rem;">Rejoignez les équipes qui font confiance à JOJ pour leur gestion des tickets.</p>
+      <div class="reveal" data-delay="0.2" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="tickets.html" class="btn-primary">Soumettre un ticket</a>
+        <a href="contact.html" class="btn-secondary">Nous contacter</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">JO<span>J</span></div>
+      <nav class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="events.html">Événements</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <p class="footer-copy">© 2026 JOJ — Gestion des Tickets. Projet réalisé dans le cadre de l'atelier créatif.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
